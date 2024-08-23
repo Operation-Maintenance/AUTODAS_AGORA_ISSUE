@@ -7,7 +7,7 @@
 // @match        https://agora2.cellnextelecom.com/*
 // @grant        none
 // @updateURL   https://raw.githubusercontent.com/Operation-Maintenance/AUTODAS_AGORA_ISSUE/main/autodas.js
-// @downloadURL https://raw.githubusercontent.com/Operation-Maintenance/AUTODAS_AGORA_ISSUE/main/autodas.js
+// @downloadURL https://raw.githubusercontent.com/Operation-Maintenance/AUTODAS_AGORA_ISSUE/main/autodas.js 
 // ==/UserScript===
 
 (function () {

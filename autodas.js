@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name         OplusM AUTODAS AGORA ISSUE
 // @namespace    https://oplusm.fr/
-// @version      1.2
+// @version      1.3
 // @description  Envoie semi-automatique de prevenance Agora
 // @author       Adi Lasri
 // @match        https://agora2.cellnextelecom.com/*
@@ -54,7 +54,7 @@
         // Prompt des informations récupéré dans la console
         console.log("Code site: " + idSite +"Departement : "+ dep +" Zone :" + zone +" Operateur : "+ Operat + " Type inter : " + typeinter + " description : " + desc + " MTO : " + MTO);
         // Appelez la fonction pour la première fois
-        sendEmail(idSite, typeinter, Operat, desc, MTO);
+        sendEmail(idSite, typeinter, Operat, desc, MTO,zone);
   
       }, 15000);
      });
@@ -69,10 +69,10 @@
           }
   
     // fonction de création du mail
-    function sendEmail(idSite, typeinter, Operat, desc, MTO ) {
+    function sendEmail(idSite, typeinter, Operat, desc, MTO,zone ) {
       let formattedTypeinter = typeinter.replace(/&/g, "et");
       var recipient = ''; // pas de destinataire automatique
-      var subject = "Cellnex telecom  /  "+ formattedTypeinter + ' / ADRESSE / ' + idSite +" / "+ MTO; // sujet du mail
+      var subject = "Cellnex telecom  /  "+ formattedTypeinter + ' / ADRESSE / ' + idSite +" / "+ MTO + " / "+ zone; // sujet du mail
       var body = 'Bonjour,%0A%0AJe vous contacte au sujet du site situé au [ADRESSE], où nous intervenons dans le cadre de la maintenance des équipements '+Operat +'%0A%0A';
       if (typeinter === "Cles & badges") {
           body += "Nos mainteneurs nous signalent que nous ne disposons pas des accès nécessaires pour nos interventions. Pourriez-vous mettre à notre disposition un trousseau de manière définitive afin qu’il soit placé dans notre boîte à clés sécurisée sur site ? %0A A défaut, pourriez-vous me transmettre les coordonnées du gardien sur site svp ?  %0A%0A";

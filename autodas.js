@@ -2,7 +2,7 @@
 // @name         OplusM AUTODAS AGORA ISSUE
 // @namespace    https://oplusm.fr/
 // @version      1.3
-// @description  Envoie semi-automatique de prevenance Agora
+// @description  Envoie semi-automatique de prevenance Agora.
 // @author       Adi Lasri
 // @match        https://agora2.cellnextelecom.com/*
 // @grant        none
